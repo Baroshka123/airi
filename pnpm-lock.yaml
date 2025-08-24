@@ -28,7 +28,7 @@ catalogs:
       specifier: ^0.3.4
       version: 0.3.4
     '@xsai/generate-text':
-      specifier: ^0.3.4
+      specifier: 0.3.4
       version: 0.3.4
     '@xsai/generate-transcription':
       specifier: ^0.3.4
@@ -1163,6 +1163,19 @@ importers:
       meta-png:
         specifier: ^1.0.6
         version: 1.0.6
+
+  packages/core-v2:
+    dependencies:
+      '@unbird/eventa':
+        specifier: ^0.0.3
+        version: 0.0.3(web-worker@1.5.0)
+      '@xsai/generate-text':
+        specifier: 'catalog:'
+        version: 0.3.4
+    devDependencies:
+      '@moeru/std':
+        specifier: 'catalog:'
+        version: 0.1.0-beta.7
 
   packages/font-cjkfonts-allseto: {}
 
@@ -6076,6 +6089,20 @@ packages:
   '@typescript-eslint/visitor-keys@8.38.0':
     resolution: {integrity: sha512-pWrTcoFNWuwHlA9CvlfSsGWs14JxfN1TH25zM5L7o0pRLhsoZkDnTsXfQRJBEWJoV5DL0jf+Z+sxiud+K0mq1g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@unbird/eventa@0.0.3':
+    resolution: {integrity: sha512-5ZSMSBmf3OjIHqpU9A32/K+TXQPxiix3vJekAM6pFJZNT+vvNeqdu1UW41dWBAGcWRDt2STwz1bIVufvjT0YiQ==}
+    peerDependencies:
+      electron: '>=30'
+      h3: 2.0.0-beta.1
+      web-worker: ^1.5.0
+    peerDependenciesMeta:
+      electron:
+        optional: true
+      h3:
+        optional: true
+      web-worker:
+        optional: true
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
@@ -18005,6 +18032,13 @@ snapshots:
       '@typescript-eslint/types': 8.38.0
       eslint-visitor-keys: 4.2.1
 
+  '@unbird/eventa@0.0.3(web-worker@1.5.0)':
+    dependencies:
+      nanoid: 5.1.5
+      picomatch: 4.0.3
+    optionalDependencies:
+      web-worker: 1.5.0
+
   '@ungap/structured-clone@1.2.0': {}
 
   '@unocss/astro@66.3.3(rolldown-vite@7.0.12(@types/node@24.1.0)(esbuild@0.25.8)(jiti@2.5.1)(less@4.4.0)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.0))(vue@3.5.18(typescript@5.9.2))':
@@ -19186,7 +19220,7 @@ snapshots:
 
   '@xsai/generate-text@0.3.4':
     dependencies:
-      '@xsai/shared': 0.3.4
+      '@xsai/shared': 0.3.5
       '@xsai/shared-chat': 0.3.4
 
   '@xsai/generate-transcription@0.3.4':
